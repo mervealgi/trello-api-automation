@@ -22,8 +22,26 @@
 							"pm.expect(responseBody).to.have.property(\"desc\");",
 							"pm.expect(responseBody).to.have.property(\"descData\");",
 							"pm.expect(responseBody.closed).to.be.a(\"boolean\");",
-							"pm.expect(responseBody.idOrganization).to.be.not.empty;",
-							"})"
+							"pm.expect(responseBody.idOrganization).to.be.not.null;",
+							"pm.expect(responseBody).to.have.property(\"idEnterprise\");",
+							"pm.expect(responseBody.pinned).to.be.a(\"boolean\");",
+							"pm.expect(responseBody.url).to.include(\"https://trello.com/apidemo-board\");",
+							"pm.expect(responseBody.shortUrl).to.include(\"https://trello.com/\");",
+							"pm.expect(responseBody.idOrganization.permissonLevel).to.be.eql(\"private\");",
+							"pm.expect(responseBody.idOrganization.hideVotes).to.be.a(\"boolean\");",
+							"pm.expect(responseBody.idOrganization.voting).to.be.eql(\"voting\");",
+							"pm.expect(responseBody.idOrganization.comment).to.be.eql(\"members\");",
+							"pm.expect(responseBody.idOrganization.invitations).to.be.eql(\"members\");",
+							"pm.expect(responseBody.idOrganization.selfJoin).to.be.a(\"boolean\");",
+							"pm.expect(responseBody.idOrganization.cardCovers).to.be.a(\"boolean\");",
+							"pm.expect(responseBody.idOrganization.cardCounts).to.be.a(\"boolean\");",
+							"pm.expect(responseBody.idOrganization.isTemplate).to.be.a(\"boolean\");",
+							"pm.expect(responseBody.idOrganization.cardAging).to.be.eql(\"regular\");",
+							"pm.expect(responseBody.idOrganization.calendarFeedEnabled).to.be.a(\"boolean\");",
+							"pm.expect(responseBody.idOrganization.hiddenPluginBoardButtons).to.be.an(\"array\");",
+							"})",
+							"",
+							""
 						],
 						"type": "text/javascript"
 					}
