@@ -76,7 +76,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "https://api.trello.com/1/lists?name=Test Documents&idBoard=6555208f8fdbcce97569a0df&key=95cc282de3fa8914563d4432f205b8ea&token=ATTA31b62ecd58dfe3beec25acf48ea9396216310be7c2f5239d876c92f78fb8a04a1461F7C5",
+					"raw": "https://api.trello.com/1/lists?name=Test Documents&idBoard=65a2e796725a8ea7eb2c8325&key=95cc282de3fa8914563d4432f205b8ea&token=ATTA31b62ecd58dfe3beec25acf48ea9396216310be7c2f5239d876c92f78fb8a04a1461F7C5",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -94,7 +94,7 @@
 						},
 						{
 							"key": "idBoard",
-							"value": "6555208f8fdbcce97569a0df"
+							"value": "65a2e796725a8ea7eb2c8325"
 						},
 						{
 							"key": "key",
