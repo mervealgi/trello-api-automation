@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "79a240e9-d80e-4bcf-980a-1c11907f8653",
+		"_postman_id": "9097ed42-023e-4c10-81e9-82aa49de2726",
 		"name": "Trello",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "31071596-9097ed42-023e-4c10-81e9-82aa49de2726"
 	},
 	"item": [
 		{
@@ -11,7 +12,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "c7d2db3b-079d-4570-9e0f-b429448fe168",
+						"id": "dce0ea7f-e496-48d5-bb8d-be6eed455cfd",
 						"exec": [
 							"pm.test(\"Verifying response body\", function () {",
 							"var responseBody = pm.response.json();",
@@ -28,7 +29,7 @@
 					}
 				}
 			],
-			"id": "37b8bf19-b0cb-4509-88b1-a1669d268638",
+			"id": "b4f68615-fbd1-4d02-8ba9-d4ddfcfe22d4",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -68,7 +69,7 @@
 		},
 		{
 			"name": "createList",
-			"id": "3434d310-c47d-4e7b-93cd-42cf85a028cd",
+			"id": "a53b715a-108b-48b7-ba77-ecaae32268e3",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -76,7 +77,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "https://api.trello.com/1/lists?name=Test Documents&idBoard=65a2e796725a8ea7eb2c8325&key=95cc282de3fa8914563d4432f205b8ea&token=ATTA31b62ecd58dfe3beec25acf48ea9396216310be7c2f5239d876c92f78fb8a04a1461F7C5",
+					"raw": "https://api.trello.com/1/lists?name=Test Documents&idBoard=6555208f8fdbcce97569a0df&key=95cc282de3fa8914563d4432f205b8ea&token=ATTA31b62ecd58dfe3beec25acf48ea9396216310be7c2f5239d876c92f78fb8a04a1461F7C5",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -94,7 +95,7 @@
 						},
 						{
 							"key": "idBoard",
-							"value": "65a2e796725a8ea7eb2c8325"
+							"value": "6555208f8fdbcce97569a0df"
 						},
 						{
 							"key": "key",
@@ -111,7 +112,7 @@
 		},
 		{
 			"name": "createCard",
-			"id": "72ef1332-069f-4104-9175-c418c607e374",
+			"id": "17e2985f-5ed6-4625-8a2a-4113662b3aaf",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -160,7 +161,7 @@
 		},
 		{
 			"name": "listsOnDashboard",
-			"id": "131e6a62-71ef-46f3-81ec-70a89374d8f6",
+			"id": "bbb4553f-f603-4aa8-910e-eab30b772dfc",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -203,7 +204,7 @@
 		},
 		{
 			"name": "cardsOnDashboard",
-			"id": "7bde13b6-ff87-4287-8716-22a3069770ef",
+			"id": "04366b50-1957-493c-a64c-856621b38f33",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -246,7 +247,7 @@
 		},
 		{
 			"name": "updateCard",
-			"id": "96e64856-768d-483e-8863-065fb2c1b503",
+			"id": "802e3c06-bf74-47e3-9b09-b858a9771d16",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -292,7 +293,7 @@
 		},
 		{
 			"name": "deleteList",
-			"id": "4b1f1fe6-00f7-4721-bb04-d60f4c83666a",
+			"id": "81d458cd-ef85-48a8-b76f-901c28d4ef59",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
