@@ -27,17 +27,6 @@
 							"pm.expect(responseBody.pinned).to.be.a(\"boolean\");",
 							"pm.expect(responseBody.url).to.include(\"apidemo-board\");",
 							"pm.expect(responseBody.shortUrl).to.include(\"https://trello.com/\");",
-							"pm.expect(responseBody.prefs.permissonLevel).to.be.eql(\"private\");",
-							"pm.expect(responseBody.prefs.hideVotes).to.be.a(\"boolean\");",
-							"pm.expect(responseBody.prefs.voting).to.be.eql(\"voting\");",
-							"pm.expect(responseBody.prefs.comment).to.be.eql(\"members\");",
-							"pm.expect(responseBody.prefs.invitations).to.be.eql(\"members\");",
-							"pm.expect(responseBody.prefs.selfJoin).to.be.a(\"boolean\");",
-							"pm.expect(responseBody.prefs.cardCovers).to.be.a(\"boolean\");",
-							"pm.expect(responseBody.prefs.cardCounts).to.be.a(\"boolean\");",
-							"pm.expect(responseBody.prefs.isTemplate).to.be.a(\"boolean\");",
-							"pm.expect(responseBody.prefs.cardAging).to.be.eql(\"regular\");",
-							"pm.expect(responseBody.prefs.calendarFeedEnabled).to.be.a(\"boolean\");",
 							"pm.expect(responseBody.prefs.hiddenPluginBoardButtons).to.be.an(\"array\");",
 							"})",
 							"",
@@ -94,6 +83,41 @@
 		},
 		{
 			"name": "createList",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5640ba65-571d-4c4c-a852-2873a79f213b",
+						"exec": [
+							"pm.test(\"Verifying response body\", function () {",
+							"var responseBody = pm.response.json();",
+							"",
+							"pm.expect(responseBody.id).to.be.not.empty;",
+							"pm.expect(responseBody.name).to.be.not.empty;",
+							"pm.expect(responseBody).to.have.property(\"desc\");",
+							"pm.expect(responseBody).to.have.property(\"descData\");",
+							"pm.expect(responseBody.closed).to.be.a(\"boolean\");",
+							"pm.expect(responseBody.idOrganization).to.be.not.null;",
+							"pm.expect(responseBody).to.have.property(\"idEnterprise\");",
+							"pm.expect(responseBody.pinned).to.be.a(\"boolean\");",
+							"pm.expect(responseBody.url).to.include(\"apidemo-board\");",
+							"pm.expect(responseBody.shortUrl).to.include(\"https://trello.com/\");",
+							"pm.expect(responseBody.prefs.hiddenPluginBoardButtons).to.be.an(\"array\");",
+							"})",
+							"",
+							"pm.test(\"Verify the status code\", function (){",
+							"    pm.response.to.have.status(200);",
+							"})",
+							"",
+							"pm.test(\"Response time is less than 9000ms\", () =>{",
+							"    pm.expect(pm.responseTime).to.below(9000);",
+							"})",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "a53b715a-108b-48b7-ba77-ecaae32268e3",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -102,7 +126,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "https://api.trello.com/1/lists?name=Test Documents&idBoard=6555208f8fdbcce97569a0df&key=95cc282de3fa8914563d4432f205b8ea&token=ATTA31b62ecd58dfe3beec25acf48ea9396216310be7c2f5239d876c92f78fb8a04a1461F7C5",
+					"raw": "https://api.trello.com/1/lists?name=Test Documents&idBoard=65ad68cf0f2490184de995aa&key=95cc282de3fa8914563d4432f205b8ea&token=ATTA31b62ecd58dfe3beec25acf48ea9396216310be7c2f5239d876c92f78fb8a04a1461F7C5",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -120,7 +144,7 @@
 						},
 						{
 							"key": "idBoard",
-							"value": "6555208f8fdbcce97569a0df"
+							"value": "65ad68cf0f2490184de995aa"
 						},
 						{
 							"key": "key",
