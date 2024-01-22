@@ -238,6 +238,38 @@
 		},
 		{
 			"name": "listsOnDashboard",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c4c6d287-9a44-4d56-951a-2d5db1690c88",
+						"exec": [
+							"pm.test(\"Verifying response body\", function () {",
+							"var responseBody = pm.response.json();",
+							"",
+							"pm.expect(responseBody.id).to.be.not.null;",
+							"pm.expect(responseBody.name).to.be.not.null;",
+							"pm.expect(responseBody.closed).to.be.a(\"boolean\");",
+							"pm.expect(responseBody).to.have.property(\"color\");",
+							"pm.expect(responseBody.idBoard).to.be.not.null;",
+							"pm.expect(responseBody.pos).to.be.not.null;",
+							"pm.expect(responseBody).to.have.property(\"limits\");",
+							"})",
+							"",
+							"pm.test(\"Verify the status code\", function (){",
+							"    pm.response.to.have.status(200);",
+							"})",
+							"",
+							"pm.test(\"Response time is less than limit\", function() {",
+							"var limit = 500;",
+							"pm.expect(pm.response.responseTime, \"Response time was longer than \" + limit + \" ms.\").to.be.below(limit);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "bbb4553f-f603-4aa8-910e-eab30b772dfc",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
