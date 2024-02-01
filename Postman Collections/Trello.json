@@ -388,6 +388,38 @@
 		},
 		{
 			"name": "updateCard",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ca87b078-cf24-4bc1-8957-85b5b576fa59",
+						"exec": [
+							"pm.test(\"Verifying response body\", function () {",
+							"var responseBody = pm.response.json();",
+							"",
+							"pm.expect(responseBody.id).to.be.not.null;",
+							"pm.expect(responseBody.name).to.be.not.null;",
+							"pm.expect(responseBody.closed).to.be.a(\"boolean\");",
+							"pm.expect(responseBody).to.have.property(\"color\");",
+							"pm.expect(responseBody.idBoard).to.be.not.null;",
+							"pm.expect(responseBody.pos).to.be.not.null;",
+							"pm.expect(responseBody).to.have.property(\"limits\");",
+							"})",
+							"",
+							"pm.test(\"Verify the status code\", function (){",
+							"    pm.response.to.have.status(200);",
+							"})",
+							"",
+							"pm.test(\"Response time is less than limit\", function() {",
+							"var limit = 500;",
+							"pm.expect(pm.response.responseTime, \"Response time was longer than \" + limit + \" ms.\").to.be.below(limit);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "802e3c06-bf74-47e3-9b09-b858a9771d16",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
